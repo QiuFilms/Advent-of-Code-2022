@@ -1,14 +1,14 @@
 f = open("input.txt")
 
-letters = []
-index = 13
+searched = 14
+index = searched-1
 for line in f:
     data = line.strip()
     for x in range(len(line)):
-        if x < len(line)-13:
+        if x < len(line)-searched-1:
             index += 1
-            check = list(dict.fromkeys(line[x:x+14]))
-            if len(check) == 14:
+            check = list(dict.fromkeys(line[x:x+searched]))
+            if len(check) == searched:
                 break
 
         
