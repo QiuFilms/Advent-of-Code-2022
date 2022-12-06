@@ -11,6 +11,4 @@ for line in f:
             if len(check) == searched:
                 break
 
-        
-
 print(index)
