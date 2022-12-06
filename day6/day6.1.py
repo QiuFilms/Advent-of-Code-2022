@@ -1,4 +1,4 @@
-f = open("test.txt")
+f = open("input.txt")
 
 letters = []
 index = 3
