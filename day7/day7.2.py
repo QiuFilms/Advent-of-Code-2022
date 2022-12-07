@@ -42,8 +42,7 @@ def countDirSize(param):
         else:
             num = countDirSize(param[key])
             size += num
-            dirSize = num
-            dirs.append([key, dirSize])
+            dirs.append([key, num])
     return size           
 
 space = 30000000
