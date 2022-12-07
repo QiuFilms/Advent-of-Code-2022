@@ -1,4 +1,4 @@
-f = open("test.txt")
+f = open("input.txt")
 tree = {"files":[]}
 
 currentDir = tree
@@ -47,9 +47,6 @@ def countDirSize(param):
     return size           
 
 countDirSize(tree)
-print(countDirSize(tree))
-
-
 result = 0
 for line in dirs:
     if line[1] <= 100000:
