@@ -34,7 +34,6 @@ for line in f:
 dirs = []
 def countDirSize(param):
     size = 0
-    dirSize = 0
     for key in param:
         if "files" in key:
             for file in param["files"]:
