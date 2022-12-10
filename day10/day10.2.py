@@ -2,20 +2,17 @@ f = open("input.txt")
 
 cycle = 1
 X = 1
-xArr = [[1,1]]
+xArr = [X]
 
 for line in f:
     data = line.strip()
     if "addx" in data:
-        cycle += 1
-        xArr.append([cycle, X])
-        cycle += 1
+        xArr.append(X)
 
         X += int(data.split(" ")[1])
-        xArr.append([cycle, X])
+        xArr.append(X)
     else:
-        cycle += 1
-        xArr.append([cycle, X])
+        xArr.append(X)
 
 screen = []
 for i in range(0,6):
@@ -24,7 +21,7 @@ for i in range(0,6):
 
     index = 0
     for c in range(40*i,40+40*i):
-        cycle, sprite = xArr[c]
+        sprite = xArr[c]
         if index == sprite or index == sprite-1 or index == sprite+1:
             row[index] = "#"
         index += 1
