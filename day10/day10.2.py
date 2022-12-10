@@ -22,19 +22,12 @@ for i in range(0,6):
     row = list("."*40)
     string=''
 
-    if i == 0:
-        for c in range(40*i,40+40*i):
-            cycle, sprite = xArr[c]
-            if c == sprite or c == sprite-1 or c == sprite+1:
-                row[c] = "#"
-    else:
-        index = 0
-        for c in range(40*i,40+40*i+1):
-            if c != 240:
-                cycle, sprite = xArr[c]
-                if index == sprite or index == sprite-1 or index == sprite+1:
-                    row[index] = "#"
-                index += 1
+    index = 0
+    for c in range(40*i,40+40*i):
+        cycle, sprite = xArr[c]
+        if index == sprite or index == sprite-1 or index == sprite+1:
+            row[index] = "#"
+        index += 1
     screen.append(string.join(row))
 
 for line in screen:
