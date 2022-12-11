@@ -39,7 +39,6 @@ def monkeyTurn(monkey):
         worryLevel = calculateWorryLevel(int(item), monkey)
         divideBy = monkey["Test"]["Divisible"]
 
-        print(worryLevel, modd,  worryLevel % modd)
         worryLevel %= modd
         if worryLevel % divideBy == 0:
             monkeys["Monkey"+monkey["Test"]["True"]]["Items"].append(worryLevel)
@@ -73,5 +72,4 @@ for r in rounds[-1]:
     mostActive.append(int(monkeys[r]["Inspected"]))
 
 mostActive.sort(reverse=True)
-print(mostActive)
 print(mostActive[0]*mostActive[1])
