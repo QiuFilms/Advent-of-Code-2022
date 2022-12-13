@@ -1,4 +1,4 @@
-f = open("input2.txt")
+f = open("input.txt")
 
 points = {
     "X" : 1,
@@ -33,6 +33,5 @@ for line in f:
             result += points[values[1]]
         elif values[1] == "Z":
             result += points[values[1]] + 3
-    print(result)
     
-#print(result)
+print(result)
