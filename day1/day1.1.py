@@ -1,4 +1,4 @@
-f = open("input.txt").read()
+f = open("input.txt")
 
 result = []
 count = 0
